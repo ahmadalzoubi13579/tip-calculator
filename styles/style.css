@@ -1,0 +1,271 @@
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  color: black;
+  margin-top: 20px;
+}
+.attribution a {
+  color: rgb(65, 65, 224);
+}
+/* Mobile and Tab Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  min-height: 100vh;
+  background-color: hsl(185, 41%, 84%);
+  display: flow-root;
+}
+
+img {
+  display: block;
+  margin: 50px auto;
+}
+
+main {
+  border-radius: 20px 20px 0 0;
+  background-color: hsl(0, 0%, 100%);
+  padding: 25px;
+  max-width: 535px;
+  margin: 0 auto;
+}
+
+section + section {
+  margin-top: 35px;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.label-wrapper {
+  display: flex;
+}
+
+.label-wrapper > * {
+  flex: 1;
+}
+
+.span-error {
+  text-align: right;
+  font-size: 15px;
+  font-weight: 700;
+  color: hsl(16, 58%, 64%);
+  display: none;
+}
+
+input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 15px 5px 0;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  transition: 0.2s;
+}
+
+.bill input {
+  padding-left: 24px;
+}
+
+.people input {
+  padding-left: 26px;
+}
+
+input:focus {
+  cursor: pointer;
+  border: 3px solid hsl(172, 67%, 45%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::placeholder {
+  color: hsl(183, 100%, 15%);
+  opacity: 0.5;
+}
+
+.bill,
+.people {
+  position: relative;
+  height: 75px;
+}
+
+.icon-dollar,
+.icon-person {
+  display: block;
+  position: absolute;
+  top: 44px;
+  left: 13px;
+}
+
+.icon-dollar {
+  width: 11px;
+  height: 17px;
+  background: url('../images/icon-dollar.svg');
+}
+
+.icon-person {
+  width: 13px;
+  height: 16px;
+  background: url('../images/icon-person.svg');
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 50px;
+  gap: 15px;
+}
+
+.tip label {
+  margin-bottom: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 7px 0;
+  font-size: 24px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(183, 100%, 15%);
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+.custom::placeholder {
+  opacity: 0.7;
+}
+
+.results {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 20px;
+  padding: 25px;
+  margin-top: 35px;
+}
+
+.results div {
+  display: flex;
+}
+
+.results div > * {
+  flex: 1;
+}
+
+.results label {
+  color: hsl(0, 0%, 100%);
+}
+
+.results label span:last-child {
+  color: hsl(184, 14%, 56%);
+  font-size: 13px;
+}
+
+.results span {
+  display: block;
+}
+
+output {
+  color: hsl(172, 67%, 45%);
+  text-align: right;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.reset {
+  width: 100%;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  margin-top: 35px;
+}
+
+.results div:first-child {
+  margin-bottom: 20px;
+}
+
+/* Dynamic Styles */
+
+.active-button {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.active-span {
+  display: block;
+}
+
+.active-input-error {
+  border: 3px solid hsl(10, 37%, 64%);
+}
+
+/* Desktop Styles */
+
+@media (min-width: 1200px) {
+  img {
+    margin: 150px auto 70px;
+  }
+
+  main {
+    display: flex;
+    column-gap: 30px;
+    max-width: 800px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 5px 14px -5px lightgray;
+    box-shadow: 0px 5px 14px -5px lightgray;
+  }
+
+  main > * {
+    flex: 1;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .results {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .reset {
+    margin-top: auto;
+  }
+
+  input:hover {
+    cursor: pointer;
+    border: 3px solid hsl(172, 67%, 45%);
+  }
+
+  button {
+    transition: 0.2s;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: hsl(173, 61%, 77%);
+    color: hsl(183, 100%, 15%);
+  }
+}
